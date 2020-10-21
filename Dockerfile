@@ -1,5 +1,6 @@
 FROM adoptopenjdk/openjdk11:latest
 # Downloading and installing Maven, git and nano
-RUN apt-get update -y && apt-get install -y maven && apt-get install git -y && apt-get install nano -y
+RUN apt-get update -y
+RUN apt-cache search maven && apt-get install maven -y
 CMD [""]
 
